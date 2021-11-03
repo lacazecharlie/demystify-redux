@@ -19,8 +19,8 @@ const mapStateToProps = (state) => ({
   title: state.title,
 })
 
-const mapDispatchToProps = {
-    changeTitle: changeTitle,
-}
+const mapDispatchToProps = (dispatch) => ({
+    changeTitle: (value) => dispatch(changeTitle(value)),
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
